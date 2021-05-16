@@ -1,7 +1,7 @@
 class Board:
-    MARU = "○"
-    BATSU = "☓"
-    DEFAULT = "　"
+    MARU = "o"
+    BATSU = "x"
+    DEFAULT = " "
 
     def __init__(self) -> None:
         self._cells = [
@@ -14,8 +14,7 @@ class Board:
     def cells(self):
         return self._cells
 
-    @cells.setter
-    def cells(self, x, y, value):
+    def update_cell(self, x, y, value):
         self._cells[x][y] = value
 
 
@@ -34,6 +33,8 @@ class BoardViewer:
 def main():
     board = Board()
     viewer = BoardViewer(board)
+    viewer.print()
+    board.update_cell(0, 1, Board.MARU)
     viewer.print()
 
 
