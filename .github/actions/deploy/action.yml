@@ -1,0 +1,7 @@
+name: deploy
+description: deploy
+runs:
+  using: "composite"
+  steps:
+    - run: echo "deploy🎉"
+      shell: bash
