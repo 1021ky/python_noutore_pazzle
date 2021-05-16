@@ -1,6 +1,3 @@
-from itertools import chain
-
-
 class Board:
     MARU = "o"
     BATSU = "x"
